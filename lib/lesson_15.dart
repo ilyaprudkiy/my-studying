@@ -44,7 +44,7 @@ void main() {
 
   //преоброзование градусов цельсия в фарингейт
   double farinheitTemperature = (input * 9 / 5) + 32;
-  print('температура градусов цельсия $input , равна $farinheitTemperature');
+  print('температура градусов цельсия $input , равна $farinheitTemperature фарингейта');
   // Выводим сумму двух чисел
   stdout.write("Введите первое число: ");
   double num1 = double.parse(stdin.readLineSync()!);
