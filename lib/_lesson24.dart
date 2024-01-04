@@ -7,8 +7,9 @@ class Person {
   String get personInfo {
     return '$firstName $lastName';
   }
-  void set infomyPerson(String value) {
-    this.lastName = value;
+
+  set infomyPerson(String value) {
+    lastName = value;
   }
 }
 void main(){

@@ -42,13 +42,10 @@ void main() {
   List<int> r = [numbers];
   print('список чисел пользователя:$List');
 
-  for(int i = 0; i <= r.length ; i++) {
+  for (int i = 0; i <= r.length; i++) {
     if (i < r.length) {
       print('$i');
       print('$i');
-
-    }
-
-
     }
   }
+}

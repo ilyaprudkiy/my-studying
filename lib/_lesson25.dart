@@ -57,8 +57,8 @@
 // }
 abstract class Vehicle {
   void start();
-  void stop();
 
+  void stop();
 }
 
 class Car implements Vehicle {
@@ -92,23 +92,23 @@ class Car implements Vehicle {
 
 class Motorcycle implements Vehicle {
   @override
-  String start(){
+  String start() {
     return 'Мотоцикл завелся';
   }
+
   @override
-  String  stop(){
+  String stop() {
     return 'Мотоцикл остановился';
   }
 }
 
-void main(){
+void main() {
   var car = Car(true, 120);
   var motorcycle = Motorcycle();
 
   car.start();
   car.stop();
 
- print(motorcycle.start());
+  print(motorcycle.start());
   print(motorcycle.stop());
 }
-
