@@ -11,23 +11,28 @@ class Rectangle extends Shape {
   double side3;
   double side4;
 
-  Rectangle(double widht, double height, this.side1, this.side2, this.side3,
-      this.side4)
-      : super(widht, height);
+  Rectangle(
+    double widht,
+    double height,
+    this.side1,
+    this.side2,
+    this.side3,
+    this.side4,
+  ) : super(widht, height);
 
-  double calculatePerimeter() {
-    return side1 + side2 + side3 + side4;
-  }
+  double calculatePerimeter() => side1 + side2 + side3 + side4;
 
-  double calculateS() {
-    return height * widht;
-  }
+  double calculateS() => height * widht;
 }
 
 class Circle extends Shape {
   double radius;
 
-  Circle(double width, double heigth, this.radius) : super(width, heigth);
+  Circle(
+    double width,
+    double heigth,
+    this.radius,
+  ) : super(width, heigth);
 
   double calculateSquare() {
     return 3.14 * radius * radius;

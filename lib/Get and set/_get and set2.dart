@@ -4,9 +4,7 @@ class Triangle {
 
   Triangle(this._base, this._heigth);
 
-  double get base {
-    return _base;
-  }
+  double get base => _base;
 
   set setbase(double value) {
     if (value >= 0) {

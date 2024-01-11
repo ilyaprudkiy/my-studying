@@ -17,8 +17,12 @@ class Maincourse extends Dish {
   String resept;
   List<String> ingridient;
 
-  Maincourse(String type, this.resept, this.ingridient, this.name)
-      : super(type);
+  Maincourse(
+    String type,
+    this.resept,
+    this.ingridient,
+    this.name,
+  ) : super(type);
 
   @override
   info() {
@@ -35,8 +39,13 @@ class Dessert extends Dish {
   List<String> ingridient;
   int massa;
 
-  Dessert(String type, this.resept, this.ingridient, this.name, this.massa)
-      : super(type);
+  Dessert(
+    String type,
+    this.resept,
+    this.ingridient,
+    this.name,
+    this.massa,
+  ) : super(type);
 
   @override
   info() {
@@ -50,7 +59,8 @@ void main() {
       'Dessert',
       'Отварите кортофель, заварите чай,залейте картофель чаем , добавьте сахар и пожарьте.',
       ['Patato' 'Sugar' 'Tea'],
-      'Guacomole', 22);
+      'Guacomole',
+      22);
   var maincourse = Maincourse(
       'MainCourse',
       'обжарить мясо,сделать соус из молока и пива, добавить специи',

@@ -9,8 +9,12 @@ class Electronics extends Product {
   String type;
   int amount;
 
-  Electronics(String name, int point, this.type, this.amount)
-      : super(name, point);
+  Electronics(
+    String name,
+    int point,
+    this.type,
+    this.amount,
+  ) : super(name, point);
 
   String infoProduct() {
     return ' name product : $name point product: $point type product: $type amount product: $amount';
@@ -21,7 +25,12 @@ class Clothing extends Product {
   String collor;
   String type;
 
-  Clothing(String name, int point, this.type, this.collor) : super(name, point);
+  Clothing(
+    String name,
+    int point,
+    this.type,
+    this.collor,
+  ) : super(name, point);
 
   String infoClothing() {
     return 'product name: $name product point: $point type product: $type collor product: $collor';
