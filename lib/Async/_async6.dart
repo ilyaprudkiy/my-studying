@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:io';
 
 Future<void> fetchData() async {
-  await Future.delayed(Duration(seconds: 3));
+  await Future.delayed(const Duration(seconds: 3));
   final url = Uri.parse('https://jsonplaceholder.typicode.com/todos/2');
 
   try {
@@ -24,9 +24,9 @@ Future<void> main() async {
   await fetchData();
 
   stdout.write('Введите ваше имя:');
-  String? name = await stdin.readLineSync();
-  if(name != null){
-  print('Привет,$name');
+  String? name = stdin.readLineSync(); //Тут не надо await, потому что функция выполняется синхронно, а не асинхронно
+  if (name != null) {
+    print('Привет,$name');
   } else {
     print('Имя не было введено.');
   }
@@ -40,4 +40,3 @@ Future<void> main() async {
   }
   print('End');
 }
-

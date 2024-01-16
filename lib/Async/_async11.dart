@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'dart:io';
 
-Future<void> donolaudFile (String url1 , String localPutch) async {
-  var response  = await  http.get(Uri.parse(url1));
+Future<void> donolaudFile(String url1, String localPutch) async {
+  var response = await http.get(Uri.parse(url1));
   try {
     if (response.statusCode == 200) {
       File file = File(localPutch);
@@ -13,10 +13,9 @@ Future<void> donolaudFile (String url1 , String localPutch) async {
     } else {
       print('Произошла ошибка статуc кода:${response.statusCode}');
     }
-  }catch (e) {
+  } catch (e) {
     print('Произошла ошибка:$e');
   }
-
 }
 
 Future<void> fetchData() async {
@@ -35,7 +34,7 @@ Future<void> fetchData() async {
   }
 }
 
-Future<void> main () async {
+Future<void> main() async {
   try {
     String url1 = 'https://example.com/sample-file.txt';
     String localPutch = 'local_file.txt';
@@ -44,12 +43,11 @@ Future<void> main () async {
     print('Start');
     await fetchData();
 
-
-      var file = File('example.txt');
-      var content = await file.readAsString();
-      print('$content');
-    } catch (e) {
-      print('ошибка: $e');
-    } 
-    print('End');
+    var file = File('example.txt');
+    var content = await file.readAsString();
+    print('$content');
+  } catch (e) {
+    print('ошибка: $e');
   }
+  print('End');
+}

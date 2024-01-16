@@ -3,11 +3,11 @@ import 'dart:math';
 
 Future<void> asyncFunctionWithError() async {
   int randomValue = Random().nextInt(2);
-  await Future.delayed(Duration(seconds: 2));
+  await Future.delayed(const Duration(seconds: 2));
 
-  if(randomValue == 0) {
+  if (randomValue == 0) {
     print('Операция прошла успешно.');
-  }else {
+  } else {
     throw Exception('Операция не была выполнена.');
   }
 }
@@ -19,4 +19,3 @@ void main() async {
     print('Произошла ошибка:$e');
   }
 }
-

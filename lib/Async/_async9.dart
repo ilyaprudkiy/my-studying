@@ -13,10 +13,11 @@ Future<void> downloadAndSaveFile(String url, String localPutch) async {
     } else {
       print('Произошла ошибка статут файла: ${response.statusCode}');
     }
-  } catch(e) {
+  } catch (e) {
     print('Ошибка:$e');
   }
 }
+
 void main() async {
   String url = 'https://example.com/sample-file.txt';
   String localFilePath = 'local_file.txt';
